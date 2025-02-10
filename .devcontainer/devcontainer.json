@@ -1,0 +1,23 @@
+{
+  "name": "Jupyter Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/home/jovyan/work",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/home/jovyan/work,type=bind,consistency=cached"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "appPort": [8888],
+  "remoteUser": "jovyan",
+  "overrideCommand": false
+}
